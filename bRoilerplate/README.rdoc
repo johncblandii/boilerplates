@@ -1,0 +1,25 @@
+== Welcome to my Rails boilerplate (aptly named bRoilerplate)
+
+It is a basic setup with the gems in place but not all installed. The Gemfile serves as the only documentation and instructions for each gem's install method. After copying/pasting this into a new directory, be sure to rename the application to your liking ("module bRoilerplate", etc).
+
+Commands to install/configure default gems (copy/paste it in the command prompt):
+bundle
+rails g rspec:install
+rails g devise:install
+rails g devise user
+rails g devise:views
+rails g migration AddSlugToUser slug 
+rails g cancan:ability
+rails g uploader Avatar
+rails g kaminari:config
+rails g kaminari:views default
+guard init
+guard init rspec
+guard init spork
+spork rspec --bootstrap
+echo ">> Update config/application.rb to:"
+echo ">>   config.generators do |g|"
+echo ">>       g.fixture_replacement :factory_girl"
+echo ">>   end"
+echo ">> Update users migration: add_index :users, :slug, unique: true"
+echo ">> 'rake db:migrate' once these changes are complete"
