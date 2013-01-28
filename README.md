@@ -1,4 +1,4 @@
-boilerplates
+My App Boilerplates
 ============
 
-My app boilerplates
+These are some boilerplates for quick starting app dev.
