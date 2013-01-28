@@ -62,16 +62,18 @@ group :development do
 	#gem 'better_errors' #use this or pry but never allow this outside of :development
 	gem "bullet"
 	gem "guard" #guard init
-	gem 'terminal-notifier-guard'
-	gem 'guard-rspec' #guard init rspec #config details here: https://github.com/guard/guard-rspec
-	gem 'guard-spork' #guard init spork #config details here: https://github.com/guard/guard-spork
+	gem 'rb-fsevent', '~> 0.9.1'
+	#gem 'terminal-notifier-guard'
+	gem 'growl_notify'
 end
 
 group :development, :test do
 	gem 'growl'
-	gem 'ruby_gntp'
-	#gem "quiet_assets"
+	#gem 'ruby_gntp'
 	gem 'rspec-rails' #rails g rspec:install
+	gem 'guard-rspec' #guard init rspec #config details here: https://github.com/guard/guard-rspec
+	gem 'guard-spork' #guard init spork #config details here: https://github.com/guard/guard-spork
+	#gem "quiet_assets"
 end
 
 group :test do
