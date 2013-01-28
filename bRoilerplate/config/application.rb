@@ -66,7 +66,8 @@ module BRoilerplate
     config.assets.version = '1.0'
 
     config.generators do |g|
-        g.fixture_replacement :factory_girl
+        g.test_framework :rspec, :fixture => true, :views => false
+        g.fixture_replacement :factory_girl, suffix: "factory", dir: "spec/factories"
     end
   end
 end
